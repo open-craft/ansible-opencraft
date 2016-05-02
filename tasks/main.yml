@@ -15,7 +15,7 @@
   pip:
     requirements="{{ opencraft_root_dir }}/requirements.txt"
     virtualenv="{{ opencraft_virtualenv_dir }}"
-    virtualenv_python=python3.4
+    virtualenv_python=python3.5
   become_user: www-data
 
 - name: Install the venv wrapper script
