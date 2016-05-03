@@ -1,6 +1,9 @@
 - name: Set login shell for user www-data
   user: name=www-data shell=/bin/bash
 
+- name: Set permissions on /var/www
+  file: path=/var/www owner=www-data group=www-data mode=750 state=directory
+
 - name: Clone the opencraft repository
   git: repo=https://github.com/open-craft/opencraft.git dest="{{ opencraft_root_dir }}" update=no
   become_user: www-data
