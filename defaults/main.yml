@@ -1,6 +1,11 @@
 OPENCRAFT_DOMAIN_NAME: '{{ inventory_hostname }}'
 OPENCRAFT_WEBSOCKET_DOMAIN_NAME: 'websocket.{{ OPENCRAFT_DOMAIN_NAME }}'
 
+# File name of the the SSH private key file used to access OpenStack servers.  You must upload the
+# corresponding public key to the OpenStack project configured in OPENCRAFT_ENV_TOKENS below and
+# set OPENSTACK_SANDBOX_SSH_KEYNAME to the name of the key.
+OPENCRAFT_OPENSTACK_SSH_KEY_FILE: null
+
 # Settings for the OpenCraft Instance manager.  See opencraft/settings.py for details.
 OPENCRAFT_ENV_TOKENS:
   ALLOWED_HOSTS: '["{{ OPENCRAFT_DOMAIN_NAME }}"]'
@@ -22,5 +27,6 @@ OPENCRAFT_ENV_TOKENS:
   SECRET_KEY: 'your-random-secret-key'
   WATCH_ORGANIZATION: 'your-github-organization'
 
+www_data_home_dir: '/var/www'
 opencraft_root_dir: '/var/www/opencraft'
 opencraft_virtualenv_dir: '/var/www/.virtualenvs/opencraft'
