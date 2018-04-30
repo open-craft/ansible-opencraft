@@ -1,5 +1,3 @@
-Ansible role for the OpenCraft Instance Manager
-===============================================
+This repository is obsolete.  The contents has been merged into the [ansible-playbooks][1] repo.
 
-This role installs and configures the OpenCraft Instance Manager.  Usage instructions are available
-in https://github.com/open-craft/opencraft/tree/master/deploy/README.md.
+[1]: https://github.com/open-craft/ansible-playbooks

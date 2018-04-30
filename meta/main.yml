@@ -1,3 +1,0 @@
-dependencies:
-  - name: pmbauer.tarsnap
-    when: "{{ OPENCRAFT_BACKUP_SWIFT_ENABLED }}"
